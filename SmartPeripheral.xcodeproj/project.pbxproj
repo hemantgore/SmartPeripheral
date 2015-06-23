@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C2B22151B39D793006CEE7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B22141B39D793006CEE7F /* main.m */; };
+		2C2B22181B39D793006CEE7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B22171B39D793006CEE7F /* AppDelegate.m */; };
+		2C2B221B1B39D793006CEE7F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B221A1B39D793006CEE7F /* ViewController.m */; };
+		2C2B221E1B39D793006CEE7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C2B221C1B39D793006CEE7F /* Main.storyboard */; };
+		2C2B22201B39D793006CEE7F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C2B221F1B39D793006CEE7F /* Images.xcassets */; };
+		2C2B22231B39D793006CEE7F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2B22211B39D793006CEE7F /* LaunchScreen.xib */; };
+		2C2B222F1B39D794006CEE7F /* SmartPeripheralTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B222E1B39D794006CEE7F /* SmartPeripheralTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C2B22291B39D794006CEE7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C2B22071B39D793006CEE7F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C2B220E1B39D793006CEE7F;
+			remoteInfo = SmartPeripheral;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C2B220F1B39D793006CEE7F /* SmartPeripheral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartPeripheral.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C2B22131B39D793006CEE7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C2B22141B39D793006CEE7F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C2B22161B39D793006CEE7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2C2B22171B39D793006CEE7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2C2B22191B39D793006CEE7F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2C2B221A1B39D793006CEE7F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2C2B221D1B39D793006CEE7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C2B221F1B39D793006CEE7F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2C2B22221B39D793006CEE7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2C2B22281B39D794006CEE7F /* SmartPeripheralTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartPeripheralTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C2B222D1B39D794006CEE7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C2B222E1B39D794006CEE7F /* SmartPeripheralTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartPeripheralTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C2B220C1B39D793006CEE7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C2B22251B39D794006CEE7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C2B22061B39D793006CEE7F = {
+			isa = PBXGroup;
+			children = (
+				2C2B22111B39D793006CEE7F /* SmartPeripheral */,
+				2C2B222B1B39D794006CEE7F /* SmartPeripheralTests */,
+				2C2B22101B39D793006CEE7F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2C2B22101B39D793006CEE7F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C2B220F1B39D793006CEE7F /* SmartPeripheral.app */,
+				2C2B22281B39D794006CEE7F /* SmartPeripheralTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C2B22111B39D793006CEE7F /* SmartPeripheral */ = {
+			isa = PBXGroup;
+			children = (
+				2C2B22161B39D793006CEE7F /* AppDelegate.h */,
+				2C2B22171B39D793006CEE7F /* AppDelegate.m */,
+				2C2B22191B39D793006CEE7F /* ViewController.h */,
+				2C2B221A1B39D793006CEE7F /* ViewController.m */,
+				2C2B221C1B39D793006CEE7F /* Main.storyboard */,
+				2C2B221F1B39D793006CEE7F /* Images.xcassets */,
+				2C2B22211B39D793006CEE7F /* LaunchScreen.xib */,
+				2C2B22121B39D793006CEE7F /* Supporting Files */,
+			);
+			path = SmartPeripheral;
+			sourceTree = "<group>";
+		};
+		2C2B22121B39D793006CEE7F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C2B22131B39D793006CEE7F /* Info.plist */,
+				2C2B22141B39D793006CEE7F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C2B222B1B39D794006CEE7F /* SmartPeripheralTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C2B222E1B39D794006CEE7F /* SmartPeripheralTests.m */,
+				2C2B222C1B39D794006CEE7F /* Supporting Files */,
+			);
+			path = SmartPeripheralTests;
+			sourceTree = "<group>";
+		};
+		2C2B222C1B39D794006CEE7F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C2B222D1B39D794006CEE7F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C2B220E1B39D793006CEE7F /* SmartPeripheral */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C2B22321B39D794006CEE7F /* Build configuration list for PBXNativeTarget "SmartPeripheral" */;
+			buildPhases = (
+				2C2B220B1B39D793006CEE7F /* Sources */,
+				2C2B220C1B39D793006CEE7F /* Frameworks */,
+				2C2B220D1B39D793006CEE7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartPeripheral;
+			productName = SmartPeripheral;
+			productReference = 2C2B220F1B39D793006CEE7F /* SmartPeripheral.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2C2B22271B39D794006CEE7F /* SmartPeripheralTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C2B22351B39D794006CEE7F /* Build configuration list for PBXNativeTarget "SmartPeripheralTests" */;
+			buildPhases = (
+				2C2B22241B39D794006CEE7F /* Sources */,
+				2C2B22251B39D794006CEE7F /* Frameworks */,
+				2C2B22261B39D794006CEE7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C2B222A1B39D794006CEE7F /* PBXTargetDependency */,
+			);
+			name = SmartPeripheralTests;
+			productName = SmartPeripheralTests;
+			productReference = 2C2B22281B39D794006CEE7F /* SmartPeripheralTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C2B22071B39D793006CEE7F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = H;
+				TargetAttributes = {
+					2C2B220E1B39D793006CEE7F = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					2C2B22271B39D794006CEE7F = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 2C2B220E1B39D793006CEE7F;
+					};
+				};
+			};
+			buildConfigurationList = 2C2B220A1B39D793006CEE7F /* Build configuration list for PBXProject "SmartPeripheral" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C2B22061B39D793006CEE7F;
+			productRefGroup = 2C2B22101B39D793006CEE7F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C2B220E1B39D793006CEE7F /* SmartPeripheral */,
+				2C2B22271B39D794006CEE7F /* SmartPeripheralTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C2B220D1B39D793006CEE7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C2B221E1B39D793006CEE7F /* Main.storyboard in Resources */,
+				2C2B22231B39D793006CEE7F /* LaunchScreen.xib in Resources */,
+				2C2B22201B39D793006CEE7F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C2B22261B39D794006CEE7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C2B220B1B39D793006CEE7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C2B221B1B39D793006CEE7F /* ViewController.m in Sources */,
+				2C2B22181B39D793006CEE7F /* AppDelegate.m in Sources */,
+				2C2B22151B39D793006CEE7F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C2B22241B39D794006CEE7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C2B222F1B39D794006CEE7F /* SmartPeripheralTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C2B222A1B39D794006CEE7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C2B220E1B39D793006CEE7F /* SmartPeripheral */;
+			targetProxy = 2C2B22291B39D794006CEE7F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2C2B221C1B39D793006CEE7F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C2B221D1B39D793006CEE7F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C2B22211B39D793006CEE7F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C2B22221B39D793006CEE7F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C2B22301B39D794006CEE7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2C2B22311B39D794006CEE7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C2B22331B39D794006CEE7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SmartPeripheral/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2C2B22341B39D794006CEE7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SmartPeripheral/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2C2B22361B39D794006CEE7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SmartPeripheralTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartPeripheral.app/SmartPeripheral";
+			};
+			name = Debug;
+		};
+		2C2B22371B39D794006CEE7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SmartPeripheralTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartPeripheral.app/SmartPeripheral";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C2B220A1B39D793006CEE7F /* Build configuration list for PBXProject "SmartPeripheral" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C2B22301B39D794006CEE7F /* Debug */,
+				2C2B22311B39D794006CEE7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C2B22321B39D794006CEE7F /* Build configuration list for PBXNativeTarget "SmartPeripheral" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C2B22331B39D794006CEE7F /* Debug */,
+				2C2B22341B39D794006CEE7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2C2B22351B39D794006CEE7F /* Build configuration list for PBXNativeTarget "SmartPeripheralTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C2B22361B39D794006CEE7F /* Debug */,
+				2C2B22371B39D794006CEE7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C2B22071B39D793006CEE7F /* Project object */;
+}
