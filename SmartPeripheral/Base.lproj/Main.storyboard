@@ -1,25 +1,116 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disconnected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIh-Ev-7p0">
+                                <rect key="frame" x="108" y="41" width="105" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REe-7l-eLo">
+                                <rect key="frame" x="135" y="20" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7j-eq-MUV">
+                                <rect key="frame" x="103" y="77" width="114" height="30"/>
+                                <state key="normal" title="Start Advertising">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startStopAdvertising:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yeR-lw-z51"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDk-V0-hnZ">
+                                <rect key="frame" x="237" y="137" width="51" height="30"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateValue:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zJq-Ye-LoY"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sHl-ao-fUE">
+                                <rect key="frame" x="112" y="137" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGt-xY-00x">
+                                <rect key="frame" x="47" y="141" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" tag="104" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiO-QZ-BDt">
+                                <rect key="frame" x="16" y="220" width="288" height="320"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Received CMDs " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0D-0m-x4K">
+                                <rect key="frame" x="16" y="191" width="129" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DDk-V0-hnZ" firstAttribute="leading" secondItem="sHl-ao-fUE" secondAttribute="trailing" constant="28" id="9e0-uH-h3f"/>
+                            <constraint firstItem="sHl-ao-fUE" firstAttribute="centerY" secondItem="mGt-xY-00x" secondAttribute="centerY" constant="0.5" id="AqH-GW-VA2"/>
+                            <constraint firstItem="W7j-eq-MUV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="87" id="CoA-M8-sXZ"/>
+                            <constraint firstItem="OiO-QZ-BDt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="DN5-KG-gqI"/>
+                            <constraint firstItem="uIh-Ev-7p0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="92" id="GKo-Zo-Wz1"/>
+                            <constraint firstItem="sHl-ao-fUE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="96" id="Gbt-vX-J53"/>
+                            <constraint firstItem="R0D-0m-x4K" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Gmo-mw-MLU"/>
+                            <constraint firstItem="DDk-V0-hnZ" firstAttribute="centerY" secondItem="sHl-ao-fUE" secondAttribute="centerY" id="KCh-yN-Awn"/>
+                            <constraint firstItem="REe-7l-eLo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="119" id="MoE-wy-UI2"/>
+                            <constraint firstItem="R0D-0m-x4K" firstAttribute="top" secondItem="sHl-ao-fUE" secondAttribute="bottom" constant="24" id="RKj-am-0g2"/>
+                            <constraint firstItem="sHl-ao-fUE" firstAttribute="leading" secondItem="mGt-xY-00x" secondAttribute="trailing" constant="18" id="SMk-uX-9Hn"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="OiO-QZ-BDt" secondAttribute="bottom" constant="28" id="VYi-Qv-E4A"/>
+                            <constraint firstItem="OiO-QZ-BDt" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="f4J-pj-jkZ"/>
+                            <constraint firstItem="sHl-ao-fUE" firstAttribute="top" secondItem="W7j-eq-MUV" secondAttribute="bottom" constant="30" id="kbd-Bf-CIb"/>
+                            <constraint firstItem="OiO-QZ-BDt" firstAttribute="top" secondItem="R0D-0m-x4K" secondAttribute="bottom" constant="8" id="o1e-3e-cJa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sHl-ao-fUE" secondAttribute="trailing" constant="95" id="txj-1a-mXg"/>
+                            <constraint firstAttribute="centerY" secondItem="uIh-Ev-7p0" secondAttribute="centerY" constant="232.5" id="uTl-6w-gMs"/>
+                            <constraint firstItem="uIh-Ev-7p0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="21" id="wL4-Iw-UXd"/>
+                            <constraint firstItem="uIh-Ev-7p0" firstAttribute="top" secondItem="REe-7l-eLo" secondAttribute="bottom" id="yA8-lO-soK"/>
+                            <constraint firstItem="W7j-eq-MUV" firstAttribute="top" secondItem="uIh-Ev-7p0" secondAttribute="bottom" constant="15" id="zy9-Ai-BGk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="debugTextView" destination="OiO-QZ-BDt" id="Z1t-8n-SzF"/>
+                        <outlet property="startAdvertising" destination="W7j-eq-MUV" id="rgf-KU-Irf"/>
+                        <outlet property="updateValueForTemp" destination="DDk-V0-hnZ" id="9bA-x5-jJX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130" y="294"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

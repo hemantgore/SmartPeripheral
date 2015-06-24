@@ -14,6 +14,10 @@
 		2C2B22201B39D793006CEE7F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C2B221F1B39D793006CEE7F /* Images.xcassets */; };
 		2C2B22231B39D793006CEE7F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2B22211B39D793006CEE7F /* LaunchScreen.xib */; };
 		2C2B222F1B39D794006CEE7F /* SmartPeripheralTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B222E1B39D794006CEE7F /* SmartPeripheralTests.m */; };
+		2C2B22391B39E321006CEE7F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2B22381B39E321006CEE7F /* CoreBluetooth.framework */; };
+		2C2B223B1B39E32F006CEE7F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2B223A1B39E32F006CEE7F /* CoreGraphics.framework */; };
+		2C2B223D1B39E336006CEE7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2B223C1B39E336006CEE7F /* Foundation.framework */; };
+		2C2B223F1B39E33F006CEE7F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2B223E1B39E33F006CEE7F /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		2C2B22281B39D794006CEE7F /* SmartPeripheralTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartPeripheralTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C2B222D1B39D794006CEE7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C2B222E1B39D794006CEE7F /* SmartPeripheralTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartPeripheralTests.m; sourceTree = "<group>"; };
+		2C2B22381B39E321006CEE7F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		2C2B223A1B39E32F006CEE7F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2C2B223C1B39E336006CEE7F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2C2B223E1B39E33F006CEE7F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2B223F1B39E33F006CEE7F /* UIKit.framework in Frameworks */,
+				2C2B223D1B39E336006CEE7F /* Foundation.framework in Frameworks */,
+				2C2B223B1B39E32F006CEE7F /* CoreGraphics.framework in Frameworks */,
+				2C2B22391B39E321006CEE7F /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				2C2B22111B39D793006CEE7F /* SmartPeripheral */,
+				2C2B22401B39E350006CEE7F /* Framework */,
 				2C2B222B1B39D794006CEE7F /* SmartPeripheralTests */,
 				2C2B22101B39D793006CEE7F /* Products */,
 			);
@@ -117,6 +130,17 @@
 				2C2B222D1B39D794006CEE7F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C2B22401B39E350006CEE7F /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				2C2B223E1B39E33F006CEE7F /* UIKit.framework */,
+				2C2B223C1B39E336006CEE7F /* Foundation.framework */,
+				2C2B223A1B39E32F006CEE7F /* CoreGraphics.framework */,
+				2C2B22381B39E321006CEE7F /* CoreBluetooth.framework */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,9 +323,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "a2472bde-01c8-4167-8888-1abeef0acf74";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -336,8 +361,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "a2472bde-01c8-4167-8888-1abeef0acf74";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -347,7 +373,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = SmartPeripheral/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -357,7 +385,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = SmartPeripheral/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
-
+#import <CoreBluetooth/CoreBluetooth.h>
+@interface ViewController : UIViewController<CBPeripheralManagerDelegate, UITextFieldDelegate>
+{
+    CBMutableCharacteristic *rx;
+    NSMutableString *str;
+}
+@property (nonatomic, strong) CBPeripheralManager *peripheralManager;
 
 @end
 
