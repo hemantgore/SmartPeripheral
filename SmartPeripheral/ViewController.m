@@ -7,9 +7,13 @@
 //
 
 #import "ViewController.h"
-#define RBL_SERVICE_UUID                    @"713d0000-503e-4c75-ba94-3148f18d941e"
-#define RBL_TX_UUID                         @"713d0003-503e-4c75-ba94-3148f18d941e"
-#define RBL_RX_UUID                         @"713d0002-503e-4c75-ba94-3148f18d941e"
+//#define RBL_SERVICE_UUID                    @"713d0000-503e-4c75-ba94-3148f18d941e"
+//#define RBL_TX_UUID                         @"713d0003-503e-4c75-ba94-3148f18d941e"
+//#define RBL_RX_UUID                         @"713d0002-503e-4c75-ba94-3148f18d941e"
+
+#define BLE_SERVICE_UUID @"BC2F4CC6-AAEF-4351-9034-D66268E328F0"
+#define BLE_CHAR_TX_UUID  @"06D1E5E7-79AD-4A71-8FAA-373789F7D93C"
+#define BLE_CHAR_RX_UUID  @"06D1E5E7-79AD-4A71-8FAA-373789F7D93C"
 
 
 @interface ViewController ()
@@ -39,59 +43,59 @@
     
     
 }
-
 - (void)peripheralManager:(CBPeripheralManager *)peripheral didReceiveWriteRequests:(NSArray *)requests
 {
     NSLog(@"didReceiveWriteRequests");
     
     CBATTRequest*       request = [requests  objectAtIndex: 0];
     NSData*             request_data = request.value;
-    CBCharacteristic*   write_char = request.characteristic;
-    
+//    CBCharacteristic*   write_char = request.characteristic;
+
     uint8_t buf[request_data.length];
     [request_data getBytes:buf length:request_data.length];
     
     NSMutableString *temp = [[NSMutableString alloc] init];
     for (int i = 0; i < request_data.length; i++) {
-        [temp appendFormat:@"%c", buf[i]];
+        
+        [temp appendFormat:@" 0x%x ", buf[i]];
     }
-    
+//    [temp replaceOccurrencesOfString:@"\\x" withString:@"0x" options:NSCaseInsensitiveSearch range:NSMakeRange(0, temp.length)];
     if (str == nil) {
         str = [NSMutableString stringWithFormat:@"%@\n", temp];
     } else {
         [str appendFormat:@"%@\n", temp];
     }
-    NSMutableString *debugInfo=  (NSMutableString*)self.debugTextView.text;
+//    NSMutableString *debugInfo=  (NSMutableString*)self.debugTextView.text;
     
     switch (buf[1]) {
         case 0xB0:
         {
             NSLog(@"System msg");
-            [debugInfo appendString:[NSString stringWithFormat:@"Syesyem Message \n"]];
+//            [debugInfo appendString:[NSString stringWithFormat:@"Syesyem Message \n"]];
             break;
         }
         case 0xB1:
         {
             NSLog(@"H/W msg");
-            [debugInfo appendString:[NSString stringWithFormat:@"Hardware Message \n"]];
+//            [debugInfo appendString:[NSString stringWithFormat:@"Hardware Message \n"]];
         }
         case 0xB2:
         {
             NSLog(@"Info msg");
-            [debugInfo appendString:[NSString stringWithFormat:@"Info Message \n"]];
+//            [debugInfo appendString:[NSString stringWithFormat:@"Info Message \n"]];
         }
         case 0xB3:
         {
             NSLog(@"Ackn msg");
-            [debugInfo appendString:[NSString stringWithFormat:@"Acknowdgement Message \n"]];
+//            [debugInfo appendString:[NSString stringWithFormat:@"Acknowdgement Message \n"]];
         }
         default:
             break;
     }
     
-    self.debugTextView.text =debugInfo;
+    self.debugTextView.text =str;
     
-    //[peripheral respondToRequest:request withResult:CBATTErrorSuccess];
+    [peripheral respondToRequest:request withResult:CBATTErrorSuccess];
 }
 -(int) decimalIntoHex:(char) number
 {
@@ -113,15 +117,15 @@
     }else{//Alreay OFF, set to ON
         [sender setTitle:@"Stop Advertising" forState:UIControlStateNormal];
         sender.tag = 1;
-        CBMutableCharacteristic *tx = [[CBMutableCharacteristic alloc] initWithType:[CBUUID UUIDWithString:RBL_TX_UUID] properties:CBCharacteristicPropertyWriteWithoutResponse value:nil permissions:CBAttributePermissionsWriteable];
-        rx = [[CBMutableCharacteristic alloc] initWithType:[CBUUID UUIDWithString:RBL_RX_UUID] properties:CBCharacteristicPropertyNotify value:nil permissions:CBAttributePermissionsReadable];
+        CBMutableCharacteristic *tx = [[CBMutableCharacteristic alloc] initWithType:[CBUUID UUIDWithString:BLE_CHAR_TX_UUID] properties:CBCharacteristicPropertyWriteWithoutResponse value:nil permissions:CBAttributePermissionsWriteable];
+        rx = [[CBMutableCharacteristic alloc] initWithType:[CBUUID UUIDWithString:BLE_CHAR_RX_UUID] properties:CBCharacteristicPropertyNotify value:nil permissions:CBAttributePermissionsReadable];
         
-        CBMutableService *s = [[CBMutableService alloc] initWithType:[CBUUID UUIDWithString:RBL_SERVICE_UUID] primary:YES];
+        CBMutableService *s = [[CBMutableService alloc] initWithType:[CBUUID UUIDWithString:BLE_SERVICE_UUID] primary:YES];
         s.characteristics = @[tx, rx];
         
         [self.peripheralManager addService:s];
         
-        NSDictionary *advertisingData = @{CBAdvertisementDataLocalNameKey : @"iPhone", CBAdvertisementDataServiceUUIDsKey : @[[CBUUID UUIDWithString:RBL_SERVICE_UUID]]};
+        NSDictionary *advertisingData = @{CBAdvertisementDataLocalNameKey : @"iPhone", CBAdvertisementDataServiceUUIDsKey : @[[CBUUID UUIDWithString:BLE_SERVICE_UUID]]};
         [self.peripheralManager startAdvertising:advertisingData];
     }
     
