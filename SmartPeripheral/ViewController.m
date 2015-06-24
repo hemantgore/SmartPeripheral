@@ -61,8 +61,35 @@
     } else {
         [str appendFormat:@"%@\n", temp];
     }
+    NSMutableString *debugInfo=  (NSMutableString*)self.debugTextView.text;
     
-
+    switch (buf[1]) {
+        case 0xB0:
+        {
+            NSLog(@"System msg");
+            [debugInfo appendString:[NSString stringWithFormat:@"Syesyem Message \n"]];
+            break;
+        }
+        case 0xB1:
+        {
+            NSLog(@"H/W msg");
+            [debugInfo appendString:[NSString stringWithFormat:@"Hardware Message \n"]];
+        }
+        case 0xB2:
+        {
+            NSLog(@"Info msg");
+            [debugInfo appendString:[NSString stringWithFormat:@"Info Message \n"]];
+        }
+        case 0xB3:
+        {
+            NSLog(@"Ackn msg");
+            [debugInfo appendString:[NSString stringWithFormat:@"Acknowdgement Message \n"]];
+        }
+        default:
+            break;
+    }
+    
+    self.debugTextView.text =debugInfo;
     
     //[peripheral respondToRequest:request withResult:CBATTErrorSuccess];
 }
